@@ -1,0 +1,4 @@
+addi t0,x0,10 # Data to store and load
+addi t1,x0,100 # Base address location of memory
+sw t0,0x0(t1) # Saving t0=10 in 0x0(t1=100)
+lw t2,0x0(t1) # Loading 0x0(t1=100)=10 to t2

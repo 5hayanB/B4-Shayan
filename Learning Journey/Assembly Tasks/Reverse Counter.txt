@@ -1,0 +1,27 @@
+li t0,10 # Given number
+
+li t1,0 # i=0
+
+add t2,x0,t0 # Counter till given number
+
+
+
+LOOP:
+
+bne t1,t2,COND # If t1!=0, jump to LOOP
+
+beq t1,t2,END # If 10 iterations are completed, finish loop
+
+
+
+COND: # Condition
+
+addi t1,t1,1
+ # incrementing i
+addi t0,t0,-1
+ # reversing the counter from given number
+j LOOP
+
+
+
+END: # loop finished
