@@ -59,21 +59,17 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <text font-family="SansSerif" font-size="9" text-anchor="middle" x="55" y="73">ID</text>
       <text font-family="SansSerif" font-size="9" text-anchor="middle" x="74" y="63">str en</text>
       <text font-family="SansSerif" font-size="9" text-anchor="middle" x="78" y="73">ld en</text>
-      <text font-family="SansSerif" font-size="9" text-anchor="middle" x="75" y="82">reg en</text>
+      <text font-family="SansSerif" font-size="9" text-anchor="middle" x="82" y="83">jal</text>
       <circ-port height="8" pin="150,240" width="8" x="46" y="66"/>
       <circ-port height="10" pin="390,160" width="10" x="85" y="55"/>
       <circ-port height="10" pin="390,220" width="10" x="85" y="65"/>
-      <circ-port height="10" pin="390,270" width="10" x="85" y="75"/>
+      <circ-port height="10" pin="390,280" width="10" x="85" y="75"/>
       <circ-anchor facing="east" height="6" width="6" x="87" y="57"/>
     </appear>
     <wire from="(150,240)" to="(180,240)"/>
     <wire from="(240,270)" to="(270,270)"/>
     <wire from="(240,230)" to="(270,230)"/>
-    <wire from="(310,280)" to="(340,280)"/>
-    <wire from="(320,260)" to="(340,260)"/>
-    <wire from="(370,270)" to="(390,270)"/>
     <wire from="(240,230)" to="(240,270)"/>
-    <wire from="(320,220)" to="(320,260)"/>
     <wire from="(220,170)" to="(270,170)"/>
     <wire from="(220,150)" to="(270,150)"/>
     <wire from="(220,210)" to="(270,210)"/>
@@ -81,48 +77,42 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(180,180)" to="(200,180)"/>
     <wire from="(180,240)" to="(200,240)"/>
     <wire from="(220,230)" to="(240,230)"/>
-    <wire from="(310,220)" to="(320,220)"/>
     <wire from="(310,160)" to="(390,160)"/>
-    <wire from="(320,220)" to="(390,220)"/>
+    <wire from="(310,220)" to="(390,220)"/>
+    <wire from="(310,280)" to="(390,280)"/>
     <wire from="(180,180)" to="(180,240)"/>
-    <comp lib="3" loc="(310,220)" name="Comparator">
-      <a name="width" val="5"/>
-      <a name="mode" val="unsigned"/>
+    <comp lib="0" loc="(220,150)" name="Constant">
+      <a name="width" val="3"/>
+      <a name="value" val="0x2"/>
+    </comp>
+    <comp lib="0" loc="(390,280)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="jal"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(150,240)" name="Pin">
       <a name="width" val="5"/>
       <a name="tristate" val="false"/>
       <a name="label" val="ID"/>
     </comp>
-    <comp lib="0" loc="(220,210)" name="Constant">
-      <a name="width" val="5"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(390,270)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="reg en"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="3" loc="(310,280)" name="Comparator">
-      <a name="width" val="5"/>
-      <a name="mode" val="unsigned"/>
-    </comp>
-    <comp lib="0" loc="(220,150)" name="Constant">
-      <a name="width" val="3"/>
-      <a name="value" val="0x2"/>
-    </comp>
     <comp lib="3" loc="(310,160)" name="Comparator">
       <a name="width" val="3"/>
       <a name="mode" val="unsigned"/>
     </comp>
-    <comp lib="0" loc="(200,240)" name="Splitter">
-      <a name="fanout" val="1"/>
-      <a name="incoming" val="5"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="0"/>
+    <comp lib="0" loc="(390,220)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="load en"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="3" loc="(310,220)" name="Comparator">
+      <a name="width" val="5"/>
+      <a name="mode" val="unsigned"/>
+    </comp>
+    <comp lib="0" loc="(220,210)" name="Constant">
+      <a name="width" val="5"/>
+      <a name="value" val="0x0"/>
     </comp>
     <comp lib="0" loc="(390,160)" name="Pin">
       <a name="facing" val="west"/>
@@ -139,19 +129,21 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="bit3" val="0"/>
       <a name="bit4" val="0"/>
     </comp>
-    <comp lib="0" loc="(390,220)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="load en"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="1" loc="(370,270)" name="OR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
+    <comp lib="3" loc="(310,280)" name="Comparator">
+      <a name="width" val="5"/>
+      <a name="mode" val="unsigned"/>
     </comp>
     <comp lib="0" loc="(220,290)" name="Constant">
       <a name="width" val="5"/>
-      <a name="value" val="0xc"/>
+      <a name="value" val="0x1b"/>
+    </comp>
+    <comp lib="0" loc="(200,240)" name="Splitter">
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="5"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
     </comp>
   </circuit>
 </project>
