@@ -1,0 +1,46 @@
+//print syntax
+println("Hello, World!")
+
+//declaring immutable and mutable identifiers
+val a=20 //immutable
+var b=21 //mutable
+
+//data types
+val c:Int=28 //integer, stores in 32 bits
+val d:String="Hello" //string
+val e:Boolean=true //boolean
+val f:Char='a' //a single character. A single quote is used only
+val g:Short=12 //stores in 16 bits
+val h:Long=15 //stores in 64 bits
+
+//operators:-,/,*,&(AND),|(OR),<<(left shift),>>(right shift),==(double eq=equal to),!=(written as ! =, don't put space in between),>,>=(written as > =, don't put space in between),<,<=(written as < =, don't put space in between)
+val i=a+b
+
+//expressions
+val j=if(a==b)21 else 20 //simple comparative expression
+val k={val l=2
+       c+l} //content in {} is called the code-block and will evantually return the value at the end to its identifier
+
+//Functions
+def aFunc(param:Int,param2:Int):Int=param+param2 //param=parameter and it is used to  declare the data type of the parameters. The ':Int' outside the brackets declares the data type of the return value
+println(aFunc(2,5))
+
+def func2={val m=2 //you can also write "def func2:Int{...}""
+          val n=4
+          m+n}
+println(func2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
